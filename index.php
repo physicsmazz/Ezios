@@ -42,10 +42,12 @@
 
     <div id="main">
         <div id="slider" class="theme-default boxShadow">
-            <img src="images/slider/slider1.jpg" alt="Pizza Making Stuff">
-            <img src="images/slider/slider2.jpg" alt="Pizza Making Stuff">
-            <img src="images/slider/slider3.jpg" alt="Pizza Making Stuff">
-            <img src="images/slider/slider4.jpg" alt="Pizza Making Stuff">
+            <img src="images/slider/slider0.jpg" alt="Food Images">
+            <img src="images/slider/slider1.jpg" alt="Food Images">
+            <img src="images/slider/slider2.jpg" alt="Food Images">
+            <img src="images/slider/slider3.jpg" alt="Food Images">
+            <img src="images/slider/slider4.jpg" alt="Food Images">
+            <img src="images/slider/slider5.jpg" alt="Food Images">
         </div>
         <div id="text" class="boxShadow">
             <p>
