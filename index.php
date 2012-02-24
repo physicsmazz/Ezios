@@ -34,7 +34,7 @@
             <ul>
                 <li><a href="index.php">Home</a></li>
                 <li><a href="menu.php">Menu</a></li>
-                <li><a href="contact.php">Contact Us</a></li>
+                <li><a id="contactLink" href="contact.php">Contact Us</a></li>
                 <li><a target="_blank" href="http://maps.google.com/maps/place?q=Ezios+17+wendell+ave+ext+01201&hl=en&cid=14628378324444132510">Find Us</a></li>
             </ul>
         </nav>
@@ -84,11 +84,15 @@ if ($_SERVER['HTTP_HOST'] == 'localhost' || strstr($_SERVER['HTTP_HOST'], '192.1
 
 <!-- scripts concatenated and minified via ant build script-->
 <script src="js/libs/jquery.nivo.slider.pack.js"></script>
-<script src="js/plugins.js"></script>
-<script src="js/script.js?v=2"></script>
 <script type="text/javascript">
     $(function () {
-        Ezios.home();
+        $('#slider').nivoSlider({
+            controlNav: false
+        });
+        $('#contactLink').click(function(){
+            alert('bring in the contact form.');
+            return false;
+        });
     });
 
 </script>
