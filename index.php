@@ -48,15 +48,6 @@
     </div>
 
     <footer>
-        <div id="alert">
-            <p style="position:absolute; margin-bottom:10px; color:#000; text-shadow:0 0 3px #333">We're Now OPEN!<br>
-            </p>
-            <img src="images/map.gif" alt="Google Map" id="map">
-
-            <p style="margin-top:80px; clear:left">17 Wendell Ave. Ext. <br>
-                Pittsfield, MA.
-            </p>
-        </div>
 
     </footer>
 </div>
