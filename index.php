@@ -15,7 +15,15 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Ezio's Ristaurante</title>
-    <meta name="description" content="">
+    <meta name="description" content="Owners Lisa and Angela Roughley always had a dream of opening a Restaurant, their dream finally became
+                    somewhat of a reality in 2009, when a restaurant was available for lease in Lanesborough, Ma. Lisa and
+                    Angela were planning on naming the restaurant, 'La Famiglia' representing the closeness of their
+                    tight-knit Italian family. But, on September 5, Lisa's father, and Angela's grandfather, Emilio Ezio
+                    Mazzantini passed away. He was only two weeks away from his ninetieth birthday. The family suggested
+                    that Lisa re-name the restaurant for her father. The family mutually agreed on the name Ezio's
+                    Ristorante, and the rest is history. Ezio's memory and spirit live on at the restaurant, and he know
+                    that he would be proud to have such a wonderful establishment named after him. He was a great man and
+                    will always be remembered.">
     <meta name="author" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/favicon.ico">
