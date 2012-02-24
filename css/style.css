@@ -295,8 +295,35 @@ nav a{
 #text p {
     font-size: 18px;
 }
-
-
+#text #contactForm{
+    position: relative;
+    padding: 20px 10px 10px 10px;
+    display: none;
+}
+#contactForm .left{
+    width: 330px;
+    float: left;
+}
+#contactForm .right{
+    width: 420px;
+    float: right;
+}
+#contactForm label{
+    display: inline-block;
+    width: 70px;
+    text-align: right;
+}
+#contactForm input{
+    margin: 2px;
+}
+#contactForm textarea{
+    width: 380px;
+    height: 100px;
+}
+#contactForm #sendBtn{
+    clear: both;
+    margin: 10px 10px 10px 600px;
+}
 
 
 /*
@@ -454,16 +481,6 @@ Author URI: http://dev7studios.com
 	left:15px;
 }
 
-.theme-default .nivo-caption {
-    font-family: Helvetica, Arial, sans-serif;
-}
-.theme-default .nivo-caption a {
-    color:#fff;
-    border-bottom:1px dotted #fff;
-}
-.theme-default .nivo-caption a:hover {
-    color:#fff;
-}
 
 
 /* ==|== non-semantic helper classes ======================================== */

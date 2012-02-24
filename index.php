@@ -6,11 +6,11 @@
 <!--[if (gt IE 9)|!(IE)]><!-->
 <html lang="en" class="no-js"> <!--<![endif]-->
 <head>
-    <?php if ($_SERVER['HTTP_HOST'] == 'localhost' || strstr($_SERVER['HTTP_HOST'],'192.168.2') || $_SERVER['HTTP_HOST'] == '127.0.0.1'){
-    }else{
-       echo ("<link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>");
-    }
-     ?>
+    <?php if ($_SERVER['HTTP_HOST'] == 'localhost' || strstr($_SERVER['HTTP_HOST'], '192.168.2') || $_SERVER['HTTP_HOST'] == '127.0.0.1') {
+} else {
+    echo ("<link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>");
+}
+    ?>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -40,10 +40,12 @@
         <h2>Tuesday through Sunday<br>7am - 2pm<br>413-344-4260</h2>
         <nav class="boxShadow">
             <ul>
-                <li><a href="index.php">Home</a></li>
-                <li><a href="menu.php">Menu</a></li>
+                <li><a id="homeLink" href="index.php">Home</a></li>
+                <li><a id="menuLink" href="menu.php">Menu</a></li>
                 <li><a id="contactLink" href="contact.php">Contact Us</a></li>
-                <li><a target="_blank" href="http://maps.google.com/maps/place?q=Ezios+17+wendell+ave+ext+01201&hl=en&cid=14628378324444132510">Find Us</a></li>
+                <li><a target="_blank"
+                       href="http://maps.google.com/maps/place?q=Ezios+17+wendell+ave+ext+01201&hl=en&cid=14628378324444132510">Find
+                    Us</a></li>
             </ul>
         </nav>
     </header>
@@ -58,54 +60,80 @@
             <img src="images/slider/slider5.jpg" alt="Food Images">
         </div>
         <div id="text" class="boxShadow">
-            <p>
-                Owners Lisa and Angela Roughley always had a dream of opening a Restaurant, their dream finally became
-                somewhat of a reality in 2009, when a restaurant was available for lease in Lanesborough, Ma. Lisa and
-                Angela were planning on naming the restaurant, "La Famiglia" representing the closeness of their
-                tight-knit Italian family. But, on September 5, Lisa's father, and Angela's grandfather, Emilio Ezio
-                Mazzantini passed away. He was only two weeks away from his ninetieth birthday. The family suggested
-                that Lisa re-name the restaurant for her father. The family mutually agreed on the name Ezio's
-                Ristorante, and the rest is history. Ezio's memory and spirit live on at the restaurant, and he know
-                that he would be proud to have such a wonderful establishment named after him. He was a great man and
-                will always be remembered.
-            </p>
+            <div id="homeText">
+                <p>
+                    Owners Lisa and Angela Roughley always had a dream of opening a Restaurant, their dream finally
+                    became
+                    somewhat of a reality in 2009, when a restaurant was available for lease in Lanesborough, Ma. Lisa
+                    and
+                    Angela were planning on naming the restaurant, "La Famiglia" representing the closeness of their
+                    tight-knit Italian family. But, on September 5, Lisa's father, and Angela's grandfather, Emilio Ezio
+                    Mazzantini passed away. He was only two weeks away from his ninetieth birthday. The family suggested
+                    that Lisa re-name the restaurant for her father. The family mutually agreed on the name Ezio's
+                    Ristorante, and the rest is history. Ezio's memory and spirit live on at the restaurant, and he know
+                    that he would be proud to have such a wonderful establishment named after him. He was a great man
+                    and
+                    will always be remembered.
+                </p>
 
-            <h3>Ezio's is now located at 17 Wendell Ave. Ext. Pittsfield, MA</h3>
-
+                <h3>Ezio's is now located at 17 Wendell Ave. Ext. Pittsfield, MA</h3>
+            </div>
+            <form id="contactForm" action="sendMail.php" method="post" class="clearfix">
+                <div class="left">
+                    <label for="name">Name: </label>
+                    <input type="text" name="name" id="name">
+                    <br>
+                    <label for="email">Email: </label>
+                    <input type="text" name="email" id="email">
+                </div>
+                <div class="right">
+                    <label for="message">Message: </label>
+                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                </div>
+                <button id="sendBtn">Send Message</button>
+            </form>
         </div>
 
+        <footer>
+
+        </footer>
     </div>
+    <!--! end of #container -->
 
-    <footer>
+    <?php
+    if ($_SERVER['HTTP_HOST'] == 'localhost' || strstr($_SERVER['HTTP_HOST'], '192.168.2')) {
+        echo('<script type="text/javascript" src="js/libs/jquery.min.js?v=1.71"></script>');
+    } else {
+        echo('<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>');
+    }
+    ?>
 
-    </footer>
-</div>
-<!--! end of #container -->
-
-<?php
-if ($_SERVER['HTTP_HOST'] == 'localhost' || strstr($_SERVER['HTTP_HOST'], '192.168.2')) {
-    echo('<script type="text/javascript" src="js/libs/jquery.min.js?v=1.71"></script>');
-} else {
-    echo('<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>');
-}
-?>
-
-<!-- scripts concatenated and minified via ant build script-->
-<script src="js/libs/jquery.nivo.slider.pack.js"></script>
-<script type="text/javascript">
-    $(function () {
-        $('#slider').nivoSlider({
-            controlNav: false
+    <!-- scripts concatenated and minified via ant build script-->
+    <script src="js/libs/jquery.nivo.slider.pack.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('#slider').nivoSlider({
+                controlNav:false
+            });
+            $('#homeLink').click(function(){
+                $('#contactForm').slideUp();
+                $('#homeText').slideDown();
+                return false;
+            });
+            $('#menuLink').click(function () {
+                alert('So, sorry. We have\'t had a change to put the menu online yet.');
+                return false;
+            });
+            $('#contactLink').click(function () {
+                $('#homeText').slideUp();
+                $('#contactForm').slideDown();
+                return false;
+            });
         });
-        $('#contactLink').click(function(){
-            alert('bring in the contact form.');
-            return false;
-        });
-    });
 
-</script>
-<!-- end concatenated and minified scripts-->
-<?php include_once 'includes/analytics.inc.php'; ?>
+    </script>
+    <!-- end concatenated and minified scripts-->
+    <?php include_once 'includes/analytics.inc.php'; ?>
 
 </body>
 </html>
