@@ -42,17 +42,17 @@ body { margin: 0; font-size: 1em; line-height: 1.4; }
  * Also: hot pink! (or customize the background color to match your design)
  */
 
-/*::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }*/
-/*::selection { background: #fe57a1; color: #fff; text-shadow: none; }*/
+::-moz-selection { background: #C2181D; color: #fff; text-shadow: none; }
+::selection { background: #C2181D; color: #fff; text-shadow: none; }
 
 
 /* =============================================================================
    Links
    ========================================================================== */
 
-a { color: #00e; }
-a:visited { color: #551a8b; }
-a:hover { color: #06e; }
+a { color: #C2181D; }
+a:visited { color: #fff; }
+a:hover { color: #C2181D; }
 a:focus { outline: thin dotted; }
 
 /* Improve readability when focused and hovered in all browsers: h5bp.com/h */
@@ -219,10 +219,11 @@ td { vertical-align: top; }
 
  html  {
      background-color: #000;
+     background-image: url("../images/wood_bg.jpg");
+     background-position: 50% -100px;
      height: 100%;
      color: #eee;
  }
-
 #container{
     width:960px;
     margin: 10px auto;
@@ -247,39 +248,220 @@ header h2{
     width: 400px;
     position: absolute;
     height: 200px;
-    right: 30px;
+    right: 80px;
     top: 30px;
     text-align: center;
+    font-family: 'Kaushan Script', cursive;
 }
 header nav{
     position: absolute;
-    background: #ddd;
-    width: 230px;
-    height: 140px;
-    padding-top: 60px;
+    background: rgba(0,0,0,0.7);
+    width: 220px;
+    height: 120px;
+    padding-top: 45px;
     z-index: 2;
     left: 100px;
     top: 230px;
 }
-
+nav a{
+    text-align: center;
+    color: #eee;
+    display: block;
+    font-size: 20px;
+}
 #main{
     width: 90%;
-    margin: 10px auto;
-    background: white;
-    height: 620px;
+    margin: 0 auto 10px;
     position: relative;
-    padding-top: 40px;
+    padding: 40px 0 20px 0;
 }
 #main #slider{
-    width: 500px;
-    height: 300px;
-    background: pink;
-    margin-left: 350px;
+    width: 380px;
+    height: 250px;
+    background: #fff;
+    margin-left: 420px;
+    overflow: hidden;
+}
+
+#text{
+    text-shadow: 0 0 4px #000;
+    padding: 10px 20px;
+    background: rgba(0,0,0,0.3);
+    width: 90%;
+    margin: 20px auto;
+}
+#text p {
+    font-size: 18px;
 }
 
 
 
 
+/*
+ * jQuery Nivo Slider v2.7
+ * http://nivo.dev7studios.com
+ *
+ * Copyright 2011, Gilbert Pellegrom
+ * Free to use and abuse under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+ *
+ * March 2010
+ */
+
+
+/* The Nivo Slider styles */
+.nivoSlider {
+	position:relative;
+}
+.nivoSlider img {
+	position:absolute;
+	top:0;
+	left:0;
+}
+/* If an image is wrapped in a link */
+.nivoSlider a.nivo-imageLink {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	border:0;
+	padding:0;
+	margin:0;
+	z-index:6;
+	display:none;
+}
+/* The slices and boxes in the Slider */
+.nivo-slice {
+	display:block;
+	position:absolute;
+	z-index:5;
+	height:100%;
+}
+.nivo-box {
+	display:block;
+	position:absolute;
+	z-index:5;
+}
+/* Caption styles */
+.nivo-caption {
+	position:absolute;
+	left:0;
+	bottom:0;
+	background:#000;
+	color:#fff;
+	opacity:0.8; /* Overridden by captionOpacity setting */
+	width:100%;
+	z-index:8;
+}
+.nivo-caption p {
+	padding:5px;
+	margin:0;
+}
+.nivo-caption a {
+	display:inline !important;
+}
+.nivo-html-caption {
+    display:none;
+}
+/* Direction nav styles (e.g. Next & Prev) */
+.nivo-directionNav a {
+	position:absolute;
+	top:45%;
+	z-index:9;
+	cursor:pointer;
+}
+.nivo-prevNav {
+	left:0;
+}
+.nivo-nextNav {
+	right:0;
+}
+/* Control nav styles (e.g. 1,2,3...) */
+.nivo-controlNav a {
+	position:relative;
+	z-index:9;
+	cursor:pointer;
+}
+.nivo-controlNav a.active {
+	font-weight:bold;
+}
+
+/*
+Skin Name: Nivo Slider Default Theme
+Skin URI: http://nivo.dev7studios.com
+Skin Type: flexible
+Description: The default skin for the Nivo Slider.
+Version: 1.0
+Author: Gilbert Pellegrom
+Author URI: http://dev7studios.com
+*/
+
+.theme-default .nivoSlider {
+	position:relative;
+	background:#fff url(../images/slider/loading.gif) no-repeat 50% 50%;
+    margin-bottom:50px;
+    -webkit-box-shadow: 0px 1px 5px 0px #4a4a4a;
+    -moz-box-shadow: 0px 1px 5px 0px #4a4a4a;
+    box-shadow: 0px 1px 5px 0px #4a4a4a;
+}
+.theme-default .nivoSlider img {
+	position:absolute;
+	top:0;
+	left:0;
+	display:none;
+}
+.theme-default .nivoSlider a {
+	border:0;
+	display:block;
+}
+
+.theme-default .nivo-controlNav {
+	position:absolute;
+	left:50%;
+	bottom:-42px;
+    margin-left:-40px; /* Tweak this to center bullets */
+}
+.theme-default .nivo-controlNav a {
+	display:block;
+	width:22px;
+	height:22px;
+	background:url(../images/slider/bullets.png) no-repeat;
+	text-indent:-9999px;
+	border:0;
+	margin-right:3px;
+	float:left;
+}
+.theme-default .nivo-controlNav a.active {
+	background-position:0 -22px;
+}
+
+.theme-default .nivo-directionNav a {
+	display:block;
+	width:30px;
+	height:30px;
+	background:url(../images/slider/arrows.png) no-repeat;
+	text-indent:-9999px;
+	border:0;
+}
+.theme-default a.nivo-nextNav {
+	background-position:-30px 0;
+	right:15px;
+}
+.theme-default a.nivo-prevNav {
+	left:15px;
+}
+
+.theme-default .nivo-caption {
+    font-family: Helvetica, Arial, sans-serif;
+}
+.theme-default .nivo-caption a {
+    color:#fff;
+    border-bottom:1px dotted #fff;
+}
+.theme-default .nivo-caption a:hover {
+    color:#fff;
+}
 
 
 /* ==|== non-semantic helper classes ======================================== */
@@ -307,7 +489,9 @@ header nav{
 .bold { font-weight:bold; }
 .noFocus:focus{ outline: none; }
 
-
+.boxShadow{
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+}
 
 /* ==|== media queries ====================================================== */
 
