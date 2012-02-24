@@ -43,7 +43,7 @@ if(isset($_POST)){
 
             $email->MsgHTML($emailBody);
             $email->Send();
-            echo ("Your message was sent.");
+            $arr['result'] ="Your message was sent.";
         } catch (Exception $e) {
             $arr['result'] = 'ERROR';
             $arr['exception'] = $e->getMessage();

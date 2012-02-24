@@ -126,7 +126,7 @@
             });
 
             $('#contactForm').submit(function(){
-                console.log('submitting');
+                $('#sendBtn').text('sending...');
                 var data = $('#contactForm').serialize();
                 dfd = $.ajax({
                     url: 'sendMail.php',
@@ -139,16 +139,14 @@
                         alert('There was a problem sending your message.');
                     }else{
                         alert('You message was sent.');
-                        $('#sendBtn').text('Send Message');
                         $('#contactForm').slideUp();
                         $('#homeText').slideDown();
                     }
-                    });
-
+                    $('#sendBtn').text('Send Message');
+                });
                     dfd.fail(function(){
                         alert('There was a problem connecting.');
                     });
-
                 return false;
             });
 
