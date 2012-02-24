@@ -6,12 +6,7 @@
 <!--[if (gt IE 9)|!(IE)]><!-->
 <html lang="en" class="no-js"> <!--<![endif]-->
 <head>
-    <?php if ($_SERVER['HTTP_HOST'] == 'localhost' || strstr($_SERVER['HTTP_HOST'], '192.168.2') || $_SERVER['HTTP_HOST'] == '127.0.0.1') {
-} else {
-    echo ("<link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>");
-}
-    ?>
-
+    <link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Ezio's Ristaurante</title>
@@ -37,7 +32,7 @@
     <header>
         <h1 id="logo" class="ir">Ezio's Ristorante - Website In Progress.</h1>
 
-        <h2>Tuesday through Sunday<br>7am - 2pm<br>413-344-4260</h2>
+        <h2>Wednesday through Sunday<br>7am - 2pm<br>413-344-4260</h2>
         <nav class="boxShadow">
             <ul>
                 <li><a id="homeLink" href="index.php">Home</a></li>
@@ -129,6 +124,36 @@
                 $('#contactForm').slideDown();
                 return false;
             });
+
+            $('#contactForm').submit(function(){
+                console.log('submitting');
+                var data = $('#contactForm').serialize();
+                dfd = $.ajax({
+                    url: 'sendMail.php',
+                    data: data,
+                    dataType: 'json',
+                    type: 'post'
+                });
+                dfd.done(function(json){
+                    if(json.result == 'ERROR'){
+                        alert('There was a problem sending your message.');
+                    }else{
+                        alert('You message was sent.');
+                        $('#sendBtn').text('Send Message');
+                        $('#contactForm').slideUp();
+                        $('#homeText').slideDown();
+                    }
+                    });
+
+                    dfd.fail(function(){
+                        alert('There was a problem connecting.');
+                    });
+
+                return false;
+            });
+
+
+
         });
 
     </script>
