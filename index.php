@@ -35,7 +35,7 @@
                 <li><a href="index.php">Home</a></li>
                 <li><a href="menu.php">Menu</a></li>
                 <li><a href="contact.php">Contact Us</a></li>
-                <li><a href="location.php">Find Us</a></li>
+                <li><a target="_blank" href="http://maps.google.com/maps/place?q=Ezios+17+wendell+ave+ext+01201&hl=en&cid=14628378324444132510">Find Us</a></li>
             </ul>
         </nav>
     </header>
