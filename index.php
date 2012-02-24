@@ -37,8 +37,9 @@
   <div id="container">
     <header>
         <h1 class="ir">Ezio's Ristorante - Website In Progress.</h1>
-        <img id="logo" src="images/eziosLogo.jpg" alt="Ezio's">
-
+        <img id="logo" src="images/logo_trans.png" alt="Ezio's">
+        <h2>Tuesday through Sunday</h2>
+        <h2>7am - 2pm</h2>
         <div id="alert">
             <p style="position:absolute; margin-bottom:10px; color:#000; text-shadow:0 0 3px #333">We're Now OPEN!<br></p>
             <img src="images/map.gif" alt="Google Map" id="map">
@@ -51,13 +52,7 @@
     
     <div id="main">
         <div id="temp">
-
-Tues - Sun:	7:00 am	-	2:00 pm.
-            <br>
-            <br>
             413-344-4260
-            <br>
-            <br>
             check back soon for some pictures and our menu.
         </div>
     </div>
