@@ -31,8 +31,15 @@
 <div id="container">
     <header>
         <h1 id="logo" class="ir">Ezio's Ristorante - Website In Progress.</h1>
-
-        <h2>Wednesday through Sunday<br>7am - 2pm<br>413-344-4260</h2>
+        <div id="hours">
+            <h3>Winter Hours</h3>
+            <div class="right">
+                <h4>Breakfast & Lunch</h4>
+                <h5>Wed, Th, Fri: 9-2 <br> Sat & Sun: 7-2</h5>
+                <h4>Dinner</h4>
+                <h5>Fri & Sat: 5-8</h5>
+            </div>
+        </div>
         <nav class="boxShadow">
             <ul>
                 <li><a id="homeLink" href="index.php">Home</a></li>
@@ -54,6 +61,7 @@
             <img src="images/slider/slider4.jpg" alt="Food Images">
             <img src="images/slider/slider5.jpg" alt="Food Images">
         </div>
+
         <div id="text" class="boxShadow">
             <div id="homeText">
                 <p>
@@ -71,7 +79,8 @@
                     will always be remembered.
                 </p>
 
-                <h3>Ezio's is now located at 17 Wendell Ave. Ext. Pittsfield, MA</h3>
+                <h3>Ezio's is now located at 17 Wendell Ave. Ext. Pittsfield, MA<br>413-344-4260</h3>
+
             </div>
             <form id="contactForm" action="sendMail.php" method="post" class="clearfix">
                 <div class="left">
