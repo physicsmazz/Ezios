@@ -9,7 +9,7 @@
     <link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Ezio's Ristaurante</title>
+    <title>Ezio's Ristorante - Homemade Italian Food</title>
     <meta name="description" content="Owners Lisa and Angela Roughley always had a dream of opening a Restaurant, their dream finally became
                     somewhat of a reality in 2009, when a restaurant was available for lease in Lanesborough, Ma. Lisa and
                     Angela were planning on naming the restaurant, 'La Famiglia' representing the closeness of their
